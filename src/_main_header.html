@@ -1,38 +1,61 @@
 <header class="page-header">
   <a href="#" class="page-header__logo">
-    <img class="page-header__logo-image" src="img/logotype-mobile.png" alt="Логотип барбершопа 'Бородинский'" width="226" height="30">
+    <img class="page-header__logo-image" src="img/logotype-mobile.svg" alt="Логотип барбершопа 'Бородинский'" width="226" height="30">
   </a>
 
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
 
-    <button type="button" class="main-nav__toggle">Открыть меню</button>
+    <button type="button" class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
 
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
-          <a href="" class="site-list__link">Главная</a>
+          <a class="site-list__link">Главная</a>
         </li>
         <li class="site-list__item">
-          <a href="" class="site-list__link">Наши работы</a>
+          <a class="site-list__link " href="">Наши работы</a>
+        </li>
+        <li class="site-list__item ">
+          <a class="site-list__link " href="">Записаться</a>
         </li>
         <li class="site-list__item">
-          <a href="" class="site-list__link">Записаться</a>
+          <a class="site-list__link" href="">Контакты</a>
         </li>
         <li class="site-list__item">
-          <a href="" class="site-list__link">Контакты</a>
-        </li>
-        <li class="site-list__item">
-          <a href="" class="site-list__link">HTML Academy</a>
+          <a class="site-list__link" href="">HTML Academy</a>
         </li>
       </ul>
-
 
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
-          <a href="login.html" class="user-list__login"></a>
+          <a class="user-list__login" href="#">
+            <svg class="user-list__login-icon" height="16" width="16" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg">
+              <path d="m499.462 0h-378.902c-9.52 0-17.223 7.703-17.223 17.223v51.668h34.446v-34.445h344.456v482.239h-344.456v-34.446h-34.446v51.668c0 9.52 7.703 17.223 17.223 17.223h378.902c9.52 0 17.223-7.703 17.223-17.223v-516.684c0-9.52-7.704-17.223-17.223-17.223z"/>
+              <path d="m204.588 366.725 24.354 24.354 115.514-115.514-115.514-115.514-24.354 24.354 73.937 73.937h-244.079v34.446h244.08z"/>
+            </svg>
+            Войти
+          </a>
         </li>
       </ul>
+
     </div>
     
   </nav>
 </header>
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+  navToggle.addEventListener('click', function(){
+    if (navMain.classList.contains('main-nav--closed'
+    )) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  })
+  
+</script>
